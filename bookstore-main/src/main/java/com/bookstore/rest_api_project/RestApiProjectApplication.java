@@ -18,6 +18,13 @@ public class RestApiProjectApplication {
     @Bean
     CommandLineRunner testMongo(BookRepository repo) {
         return args -> {
+            // Example line of code
+            // Written by Anthony Diotte
+            System.out.println("This is a text");
+            System.out.println("This is a change");
+            // Example code ends here
+            //--------------------------------------------------
+
             // Add a sample book to the DB
             repo.save(new Book("1", "Clean Code", "Robert Martin"));
             repo.save(new Book("2", "Nights of Plague", "Orhan Pamuk"));
