@@ -16,6 +16,7 @@ public class UserProfile {
     private String name;
     private String email_address;
     private String home_address;
+    private CreditCard[] creditCards;
 
    public UserProfile(String username, String password, String name, String email_address, String home_address)
    {
@@ -24,6 +25,7 @@ public class UserProfile {
     this.name = name;
     this.email_address = email_address;
     this.home_address = home_address;
+    creditCards = new CreditCard[50];
    }
 
    public UserProfile()
@@ -82,5 +84,15 @@ public class UserProfile {
     home_address = newValue;
     return home_address;
    }
-     
+   
+   public CreditCard getCreditCard(int position)
+   {
+    return creditCards[position];
+   }
+   public CreditCard setCreditCard(CreditCard obj, int position)
+   {
+    creditCards[position] = obj;
+    return obj;
+   }
+
 }
