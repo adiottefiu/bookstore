@@ -1,10 +1,10 @@
-package com.bookstore.rest_api_project;
+package com.adiottefiu.bookstore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RestApiProjectApplicationTests {
+class BookstoreApplicationTests {
 
 	@Test
 	void contextLoads() {
