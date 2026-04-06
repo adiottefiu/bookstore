@@ -69,10 +69,10 @@ public class UserProfileController {
     }
 
     @GetMapping("/createCard/{username}/{cardNumber}/{cardType}")
-    public void createCreditCard(@PathVariable String username, @PathVariable int cardNumber, @PathVariable String cardType)
+    public void createCreditCard(@PathVariable String username, @PathVariable String cardNumber, @PathVariable String cardType)
     {
         UserProfile profileObject = getUser(username);
-        //Check for first empty space in Credit Cards array
+        //Check for first empty slot in Credit Cards array
         int position = 0;
 
         for (position = 0; position < 50; position++)
@@ -82,7 +82,7 @@ public class UserProfileController {
                 break;
             }    
         }
-
+        //Create new credit card object and insert into empty slot of user's Credit Cards array
         CreditCard newCard = new CreditCard(cardNumber, cardType);
         profileObject.setCreditCard(newCard, position);
         profileRepo.save(profileObject);
