@@ -17,6 +17,7 @@ public class UserProfile {
     private String email_address;
     private String home_address;
     private CreditCard[] creditCards;
+    //private CreditCard[] creditCards = new CreditCard[50];
 
    public UserProfile(String username, String password, String name, String email_address, String home_address)
    {

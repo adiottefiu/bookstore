@@ -3,10 +3,10 @@ package com.adiottefiu.bookstore.UserProfile_Classes;
 public class CreditCard {
     //@Id denotes the primary key
     //The profile's username will be the primary key
-    private Integer cardNumber;
+    private String cardNumber;
     private String cardType;
 
-   public CreditCard(int cardNumber, String cardType)
+   public CreditCard(String cardNumber, String cardType)
    {
     this.cardNumber = cardNumber;
     this.cardType = cardType;
@@ -19,11 +19,11 @@ public class CreditCard {
    }
 
    //getter and setter methods
-   public int getCardNumber()
+   public String getCardNumber()
    {
     return cardNumber;
    }
-   public int setCardnumber(int newValue)
+   public String setCardnumber(String newValue)
    {
     cardNumber = newValue;
     return cardNumber;
